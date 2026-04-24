@@ -1,0 +1,18 @@
+manifest_schema:
+  object_id: "string"
+  views:
+    - view_id: "string"
+      image: "relative_path_to_rgb_png"
+      depth: "relative_path_to_depth_npy"
+      mask: "relative_path_to_mask_png"
+      camera:
+        intrinsics: "3x3 matrix (row-major list)"
+        extrinsics: "4x4 matrix (row-major list)"
+      targets:
+        albedo: "optional relative path"
+        normal: "optional relative path"
+        roughness: "optional relative path"
+        metallic: "optional relative path"
+notes:
+  - "This schema is for the public scaffold and demonstration only."
+  - "Private dataset parsing and production data cleaning are withheld pre-publication."
