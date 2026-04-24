@@ -1,0 +1,19 @@
+base_config: "configs/base.yaml"
+project:
+  stage: "stage3_mvc"
+
+freeze:
+  base_predictor: true
+  refiner: false
+  sigmanet: false
+
+loss:
+  render_back:
+    enabled: true
+  mvc:
+    enabled: true
+
+training:
+  warmup:
+    epochs: 1
+    lr_scale: 0.2

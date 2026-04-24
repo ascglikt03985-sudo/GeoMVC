@@ -1,0 +1,34 @@
+{
+  "objects": [
+    {
+      "object_id": "demo_object_001",
+      "views": [
+        {
+          "view_id": "view_000",
+          "image": "demo_object_001/view_000_rgb.png",
+          "depth": "demo_object_001/view_000_depth.npy",
+          "mask": "demo_object_001/view_000_mask.png",
+          "camera": {
+            "intrinsics": [
+              [120.0, 0.0, 64.0],
+              [0.0, 120.0, 64.0],
+              [0.0, 0.0, 1.0]
+            ],
+            "extrinsics": [
+              [1.0, 0.0, 0.0, 0.0],
+              [0.0, 1.0, 0.0, 0.0],
+              [0.0, 0.0, 1.0, 0.0],
+              [0.0, 0.0, 0.0, 1.0]
+            ]
+          },
+          "targets": {
+            "albedo": "demo_object_001/view_000_albedo.png",
+            "normal": "demo_object_001/view_000_normal.npy",
+            "roughness": "demo_object_001/view_000_roughness.npy",
+            "metallic": "demo_object_001/view_000_metallic.npy"
+          }
+        }
+      ]
+    }
+  ]
+}

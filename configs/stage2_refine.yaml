@@ -1,0 +1,14 @@
+base_config: "configs/base.yaml"
+project:
+  stage: "stage2_refine"
+
+freeze:
+  base_predictor: true
+  refiner: false
+  sigmanet: true
+
+loss:
+  render_back:
+    enabled: true
+  mvc:
+    enabled: false
