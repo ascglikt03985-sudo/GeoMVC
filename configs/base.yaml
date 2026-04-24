@@ -1,0 +1,61 @@
+project:
+  name: "GeoMVC-public-scaffold"
+  stage: "base"
+seed: 42
+device: "cuda"
+mixed_precision: false
+
+data:
+  root: "data/demo_multiview"
+  manifest: "data_schema/sample_manifest.json"
+  image_size: [128, 128]
+  channels:
+    rgb: 3
+    depth: 1
+    mask: 1
+  loader:
+    batch_size: 1
+    num_workers: 0
+
+camera:
+  convention: "opencv"
+  depth_epsilon: 1.0e-6
+
+model:
+  base_predictor:
+    in_channels: 5
+    hidden_channels: 32
+  refiner:
+    in_channels: 11
+    hidden_channels: 32
+  sigmanet:
+    in_channels: 2
+    hidden_channels: 16
+
+loss:
+  weights:
+    albedo_l1: 1.0
+    normal_cosine: 0.5
+    roughness_l1: 0.3
+    metallic_l1: 0.3
+    render_back: 0.2
+    mvc: 0.4
+  render_back:
+    enabled: false
+  mvc:
+    enabled: false
+
+optimizer:
+  name: "adam"
+  lr: 0.0002
+  weight_decay: 0.0
+
+training:
+  epochs: 5
+  log_interval: 10
+  grad_clip_norm: 1.0
+
+freeze:
+  base_predictor: false
+  refiner: false
+  sigmanet: false
