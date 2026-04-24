@@ -2,12 +2,6 @@
 
 GeoMVC is a **Geometry-Aligned Multi-View Consistency** framework for PBR material decomposition.
 
-> **Important notice**
->
-> This repository is a **pre-publication public scaffold**.
-> It provides interfaces, configuration files, data schema, and a runnable dummy pipeline only.
-> Full training code, exact model architecture, private data processing scripts, checkpoints, and the production differentiable renderer will be released **after publication**.
-
 ## Method Overview
 
 GeoMVC takes multi-view inputs:
